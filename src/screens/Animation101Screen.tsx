@@ -1,10 +1,12 @@
 import React from 'react'
-import { Animated, Button,  StyleSheet, View } from 'react-native'
+import { Animated, Button, StyleSheet, View } from 'react-native'
 import { useFadeAndAnimatios } from '../hooks/useFadeAndAnimatios'
 
 export const Animation101Screen = () => {
 
-    const {fadeIn , fadeOut , position, opacity, startMovingPosicion } =useFadeAndAnimatios()
+
+
+    const { fadeIn, fadeOut, position, opacity, startMovingPosicion } = useFadeAndAnimatios()
 
 
     return (
@@ -20,7 +22,7 @@ export const Animation101Screen = () => {
 
             <Button
                 title="Fade In"
-                onPress={()=> {
+                onPress={() => {
                     fadeIn()
                     startMovingPosicion(-100)
                 }}
