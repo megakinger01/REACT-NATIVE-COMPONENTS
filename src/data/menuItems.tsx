@@ -39,4 +39,14 @@ export const menuItems: MenuItem[] =[
         icon : 'list-outline',
         component : 'CustomSectionListScreen'
     },
+    {
+        name : 'animation 108 Modal',
+        icon : 'copy-outline',
+        component : 'ModalScreen'
+    },
+    {
+        name : 'animation 108 Infnity Scroll',
+        icon : 'download-outline',
+        component : 'InfinityScrollScreen'
+    },
 ]

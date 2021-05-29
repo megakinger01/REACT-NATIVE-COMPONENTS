@@ -18,7 +18,7 @@ export const useFadeAndAnimatios = () => {
                 useNativeDriver: true    /** propiedad par q corra mejor en el software */
             }
 
-        ).start(() => console.log('fin de animacion'))  /**start parar que inicie */
+        ).start()  /**start parar que inicie */
         }
 
 
