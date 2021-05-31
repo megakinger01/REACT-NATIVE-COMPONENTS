@@ -49,4 +49,15 @@ export const menuItems: MenuItem[] =[
         icon : 'download-outline',
         component : 'InfinityScrollScreen'
     },
+    {
+        name : 'animation 109 Slides',
+        icon : 'code-slash-outline',
+        component : 'SlideScreen'
+    },
+
+    {
+        name : 'animation 110 Theme',
+        icon : 'flask-outline',
+        component : 'ChangeThemeScreen'
+    },
 ]
