@@ -5,20 +5,32 @@ import { ThemeContext } from '../context/themeContext/ThemeContext';
 
 export const ChangeThemeScreen = () => {
 
-    const { SetDarkTheme } = useContext(ThemeContext)
+    const { SetDarkTheme, SetLightTheme, theme:{colors} } = useContext(ThemeContext)
 
     return (
         <View>
             <HeaderItem title="Theme" />
 
-            <TouchableOpacity
-                style={styles.btn}
-                onPress={SetDarkTheme}
-            >
-                <Text style={styles.textBtn}>
-                    dark/light
-                </Text>
-            </TouchableOpacity>
+            <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+
+                    <TouchableOpacity
+                        style={{...styles.btn, backgroundColor:colors.primary}}
+                        onPress={SetLightTheme}
+                    >
+                        <Text style={styles.textBtn}>
+                            light
+                        </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={styles.btn}
+                        onPress={SetDarkTheme}
+                    >
+                        <Text style={styles.textBtn}>
+                            dark
+                        </Text>
+                    </TouchableOpacity>
+            </View>
 
         </View>
     )

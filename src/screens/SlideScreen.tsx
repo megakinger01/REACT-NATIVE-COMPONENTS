@@ -1,11 +1,12 @@
 import { StackScreenProps } from '@react-navigation/stack';
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import { Dimensions, Image, ImageSourcePropType, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, Animated } from 'react-native';
 
 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useFadeAndAnimatios } from '../hooks/useFadeAndAnimatios';
+import { ThemeContext } from '../context/themeContext/ThemeContext';
 
 
 
@@ -72,6 +73,7 @@ export const SlideScreen = ({ navigation }: Props) => {
 
     const [activeIndex, setActiveIndex] = useState(0)
     const isVisible = useRef(false)
+    const {theme:{colors}} = useContext(ThemeContext)
 
     const { opacity, fadeIn } = useFadeAndAnimatios()
 
@@ -111,7 +113,7 @@ export const SlideScreen = ({ navigation }: Props) => {
                         width: 10,
                         height: 10,
                         borderRadius: 5,
-                        backgroundColor: '#5856D6'
+                        backgroundColor: colors.primary
                     }}
                 />
 
